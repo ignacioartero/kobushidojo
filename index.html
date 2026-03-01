@@ -21,7 +21,6 @@
         nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); display: flex; justify-content: center; padding: 12px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); backdrop-filter: blur(5px); }
         nav a { margin: 0 15px; text-decoration: none; color: var(--vino); font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; }
 
-        /* Contenedor de Video YouTube de Fondo */
         .hero { position: relative; height: 60vh; width: 100%; overflow: hidden; background: black; display: flex; align-items: center; justify-content: center; }
         .hero iframe { position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%); pointer-events: none; opacity: 0.6; }
         .hero-text { color: white; text-align: center; z-index: 1; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
@@ -32,7 +31,7 @@
 
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
         
-        .slideshow-container { width: 100%; position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); height: 350px; }
+        .slideshow-container { width: 100%; position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); height: 350px; background: #eee; }
         .mySlides { display: none; width: 100%; height: 100%; object-fit: cover; }
         .fade { animation: fadeimg 1.5s; }
         @keyframes fadeimg { from {opacity: .4} to {opacity: 1} }
@@ -54,7 +53,7 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="Kobushi Dojo" class="main-logo">
+    <img src="Logo.png" alt="Kobushi Dojo" class="main-logo">
 </header>
 
 <nav>
@@ -82,9 +81,9 @@
                 <p>Ubicados en Bahía Blanca, nuestro espacio está diseñado para la práctica inmersiva y el bienestar integral.</p>
             </div>
             <div class="slideshow-container">
-                <img src="interior.jpg" class="mySlides fade">
-                <img src="interior1.jpg" class="mySlides fade">
-                <img src="interior2.jpg" class="mySlides fade">
+                <img src="Interior.JPG" class="mySlides fade">
+                <img src="Interior1.JPG" class="mySlides fade">
+                <img src="Interior2.JPG" class="mySlides fade">
             </div>
         </div>
     </section>
@@ -126,13 +125,11 @@
         </table>
     </section>
 
-<section id="contacto" style="margin-top: 60px;">
+    <section id="contacto" style="margin-top: 60px;">
         <h2>Ubicación</h2>
         <p>José Ingenieros 2076, Bahía Blanca.</p>
         <div class="mapa">
-            <iframe width="100%" height="100%" frameborder="0" style="border:0" 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.843105747413!2d-62.27252392420822!3d-38.68675667177047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbb818a8535ab%3A0x7f07f5576753aed1!2sAikido%20Kobushi%20Dojo!5e0!3m2!1ses-419!2sar!4v1709320000000!5m2!1ses-419!2sar" 
-            allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.8415849043594!2d-62.27252392419044!3d-38.686760971770634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eda7818a8535ab%3A0x7f07f5576753aed1!2sAikido%20Kobushi%20Dojo!5e0!3m2!1ses-419!2sar!4v1709400000000!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 </div>
@@ -149,13 +146,13 @@
         for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
+        if (slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";
         setTimeout(showSlides, 3500);
     }
 </script>
 
 <footer>
-    <img src="fachada.jpg" alt="Fachada Kobushi" style="max-width: 100px; border-radius: 50%; border: 3px solid var(--dorado); margin-bottom: 15px;">
+    <img src="Fachada.JPG" alt="Fachada Kobushi" style="max-width: 100px; border-radius: 50%; border: 3px solid var(--dorado); margin-bottom: 15px;">
     <h3>Kobushi Dojo</h3>
     <p>Bahía Blanca, Argentina</p>
 </footer>
