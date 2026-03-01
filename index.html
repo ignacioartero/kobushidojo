@@ -179,7 +179,14 @@
     
     <h3 style="margin: 0; color: var(--dorado); letter-spacing: 1px;">Kobushi Dojo</h3>
     <p style="margin: 5px 0 0 0; opacity: 0.8; font-size: 0.9rem;">José Ingenieros 2076, Bahía Blanca</p>
-    <p style="margin: 20px 0 0 0; font-size: 0.7rem; opacity: 0.5;">© 2024 - Budo Tradicional</p>
+<p style="margin: 20px 0 0 0; font-size: 0.7rem; opacity: 0.5;">
+    © <span id="year"></span> - Budo Tradicional
+</p>
+
+<script>
+    // Esto pone el año actual automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </footer>
 
 
