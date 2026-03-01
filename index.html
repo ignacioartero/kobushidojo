@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kobushi Dojo - Artes Marciales Japonesas</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4B192D">
+
+    <meta property="og:title" content="Kobushi Dojo - Bahía Blanca">
+    <meta property="og:description" content="Aikido, Iaido y Shiatsu. Tradición japonesa en José Ingenieros 2076.">
+    <meta property="og:image" content="android-icon-192x192.png">
+    <meta property="og:url" content="https://kobushi.ar">
+
     <style>
         :root {
             --vino: #4B192D;
@@ -13,7 +25,7 @@
             --verde-wa: #25d366;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; background: var(--blanco); scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; background: var(--blanco); scroll-behavior: smooth; }
 
         header { background-color: var(--vino); padding: 15px 20px; text-align: center; border-bottom: 4px solid var(--dorado); }
         .main-logo { max-width: 180px; height: auto; display: block; margin: 0 auto; }
@@ -45,15 +57,23 @@
 
         .btn-whatsapp { position: fixed; bottom: 20px; right: 20px; background-color: var(--verde-wa); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1001; text-decoration: none; font-size: 30px; }
 
+        /* Estilo Botón Mercado Pago */
+        .btn-pago { display: inline-block; background-color: var(--vino); color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid var(--dorado); transition: 0.3s; margin-top: 10px; }
+        .btn-pago:hover { background-color: #63223a; transform: scale(1.02); }
+
         footer { background: #1a1a1a; color: white; padding: 40px 20px; text-align: center; }
         
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero-text h1 { font-size: 1.8rem; } }
+        @media (max-width: 768px) { 
+            .grid { grid-template-columns: 1fr; } 
+            .hero-text h1 { font-size: 1.8rem; } 
+            .slideshow-container { height: 250px; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="Logo.png" alt="Kobushi Dojo" class="main-logo">
+    <img src="logo.png" alt="Kobushi Dojo" class="main-logo">
 </header>
 
 <nav>
@@ -81,27 +101,15 @@
                 <p>Ubicados en Bahía Blanca, nuestro espacio está diseñado para la práctica inmersiva y el bienestar integral.</p>
             </div>
             <div class="slideshow-container">
-                <img src="Interior.JPG" class="mySlides fade">
-                <img src="Interior1.JPG" class="mySlides fade">
-                <img src="Interior2.JPG" class="mySlides fade">
+                <img src="Interior.jpg" class="mySlides fade">
+                <img src="Interior1.jpg" class="mySlides fade">
+                <img src="Interior2.jpg" class="mySlides fade">
             </div>
         </div>
     </section>
 
-    <section id="shiatsu" style="margin-top: 60px;">
-        <h2>Shiatsu y Bienestar</h2>
-        <div class="shiatsu-box">
-            <p>El dojo es un centro de salud y aprendizaje cultural:</p>
-            <ul style="line-height: 1.8;">
-                <li><strong>Terapia de Shiatsu:</strong> Sesiones personalizadas de digitopuntura japonesa.</li>
-                <li><strong>Curso de Shiatsu:</strong> Formación técnica profesional.</li>
-                <li><em>Próximamente: Japonés, Shodo y Terapias Alternativas.</em></li>
-            </ul>
-        </div>
-    </section>
-
     <section id="horarios" style="margin-top: 60px;">
-        <h2>Horarios de Clases</h2>
+        <h2>Horarios y Pagos</h2>
         <table class="tabla">
             <thead>
                 <tr>
@@ -123,13 +131,15 @@
                 </tr>
             </tbody>
         </table>
+        
+        <a href="#" class="btn-pago">Pagar Cuota Mensual</a>
     </section>
 
     <section id="contacto" style="margin-top: 60px;">
         <h2>Ubicación</h2>
         <p>José Ingenieros 2076, Bahía Blanca.</p>
         <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.8415849043594!2d-62.27252392419044!3d-38.686760971770634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eda7818a8535ab%3A0x7f07f5576753aed1!2sAikido%20Kobushi%20Dojo!5e0!3m2!1ses-419!2sar!4v1709400000000!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.564757530635!2d-62.2412854!3d-38.7277712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbcb641680d9d%3A0x7d8a6b1f2b6e1e8!2sJos%C3%A9%20Ingenieros%202076%2C%20B8000%20Bah%C3%ADa%20Blanca%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 </div>
@@ -152,7 +162,7 @@
 </script>
 
 <footer>
-    <img src="Fachada.JPG" alt="Fachada Kobushi" style="max-width: 100px; border-radius: 50%; border: 3px solid var(--dorado); margin-bottom: 15px;">
+    <img src="Fachada.jpg" alt="Fachada Kobushi" style="max-width: 100px; border-radius: 50%; border: 3px solid var(--dorado); margin-bottom: 15px;">
     <h3>Kobushi Dojo</h3>
     <p>Bahía Blanca, Argentina</p>
 </footer>
